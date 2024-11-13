@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --first-color : #a8dadc;
+    --second-color : #0a9396;
+    --menu-color : #f9f7f3;
+    --icon-hover : #2A878F;
+    --icon-div : #ffffff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241));
+    padding: 10px;
+}
+
+
+.login-box { 
+     width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: auto;
+    margin-top: 10%;
+padding: 40px 30px 70px;
+border-radius: 10px;
+position: relative;
+}
+
+.login-box input::placeholder{
+    font-size: 15px;
+    color: #8A8A8A;
+}
+.login-box .image-logo{
+    display: flex;
+    justify-content:space-evenly;
+
+}
+.image-logo img {
+    width: 90px;
+
+}
+
+.login-box h3{
+    margin-top: 20px;
+        color: #8A8A8A;
+        margin-bottom: 20px;
+        text-align: center;
+}
+
+
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+ 
+
+}
+
+.row input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--first-color);
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+
+}
+
+
+.submit-btn, input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: var(--second-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;   
+}
+
+.submit-btn:hover, input[type="submit"]:hover{
+    background: #005f73;
+}
+
+/* bage home.html */
+
+header {
+    height: 50px;
+    background: var(--second-color);
+    padding: 5px 30px;
+}
+
+header .header-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.header-type .type-rl {
+    display: flex;
+    align-items: center;
+}
+.header-type .right{
+    cursor: pointer;
+}
+
+.popup-outer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+pointer-events: none;
+box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+transform: scale(1.2);
+transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.popup-outer .popup-box {
+position: relative;
+padding: 30px;
+max-width: 600px;
+width: 100%;
+background: #fff;
+border-radius: 12px;
+
+}
+
+.popup-box .close {
+    font-size: 24px;
+    color: #b4b4b4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.popup-box .close:hover{
+    color: red;
+}
+
+.popup-box .profile-text img{
+
+width: 120px;
+}
+.show {
+opacity: 1;  
+pointer-events: auto; 
+
+    }
+.header-type .left ion-icon{
+    margin-right: 30px;
+}
+
+header ion-icon{
+    color: #fff;
+    font-size: 22px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+header ion-icon:hover {
+    background: var(--icon-hover);
+}
+header h4{
+    color: #fff;
+}
+.menu {
+position: absolute;
+
+}
+.ļogo  {
+    position: relative;
+    top: 20px;
+    right: 50px;
+    width: 120px;
+    height: 100px;
+    margin-right: 40px;
+    margin-top: 40px;
+
+
+}
+
+ .menu {
+    /* position: absolute; */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35px;
+    height: 100%;
+    background: #f4f3ee;
+    padding: 30px;
+
+}
+.menu ul {
+    position: relative;
+
+}
+
+ .menu  li a{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    transition: 0.5s;
+    padding: 15px 20px;
+
+}
+
+ .menu ion-icon{
+    font-size: 22px;
+}
+
+ .menu  a {
+    text-decoration: none;
+}
+
+/* .menu ul li.hovered {
+    border-left: 3px solid var(--second-color);
+} */
+
+.navigation ul li.active  {
+    border-left: 3px solid var(--second-color);    
+      }
+.add-form-text {
+  }
+
+ /* a:hover .add-form-text {
+    display: block;
+  } */
+
+   ul li a:hover ion-icon,
+  ul li a:hover .add-form-text {
+    background: var(--icon-div);
+    color: var(--second-color);
+
+}
+
+
+ul li a:hover .exitIcon,
+ul li a:hover .exitText {
+    background: var(--icon-div);
+color: red;
+}
+
+
+.body-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f9f7f3;
+
+    /* f9f7f3 
+   fef9ef */
+}
+
+/* box form register  */
+.register-box {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+margin: auto;
+    width: 400px;
+    padding: 40px;
+    background: #f4f3ee;
+    /* box-shadow: 0 5PX 5PX rgba(0, 0, 0, .6); */
+border-radius: 10px;  
+}
+
+
+
+.register-box .user-box {
+    position: relative;
+}
+
+.register-box .user-box  input,
+.register-box .user-box select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid var(--second-color);
+    outline: none;
+    background: transparent;
+}
+
+
+.register-box .time-box .user-boxDate {
+   margin-left: 10px; 
+
+}
+.register-box .time-box{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+
+.register-box .user-box label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #8A8A8A;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.register-box .user-box .label_sp{
+    top: -15px;
+}
+.register-box .user-box input:focus ~ label,
+.register-box .user-box input:valid ~ label,
+.register-box .user-box select:focus ~ label,
+.register-box .user-box select:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: var(--second-color);
+    font-size: 12px;
+}
+
+
+/* ul with search */
+
+.wrapper {
+  margin-bottom: 30px;
+}
+.select-btn, .options li {
+display: flex;
+cursor: pointer;
+align-items: center;
+
+
+}
+.select-btn{
+  font-size: 16px;
+  align-items: center;
+  padding: 0 20px;
+  background: #f4f3ee;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--second-color);
+
+}
+
+.select-btn i {
+  font-size: 31px;
+transition: transform 0.3s linear;
+}
+.wrapper.active .select-btn i {
+  transform: rotate(-180deg);
+}
+.content {
+  display: none;
+  padding: 20px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px;
+
+}
+.wrapper.active .content {
+  display: block;
+  
+}
+
+.content .search{
+  position: relative;
+}
+.search i{
+  left: 15px;
+  color: #999;
+  font-size: 20px;
+  line-height: 53px;
+position: absolute;
+
+}
+.search input {
+  height: 53px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+padding: 0 15px 0 43px;
+border: 1px solid #b3b3b3;
+}
+
+.content .options {
+  margin-top: 10px;
+  max-height: 250px;
+overflow-y: auto;
+padding-right: 7px;
+
+}
+.options::-webkit-scrollbar{
+width: 7px;
+}
+.options::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 25px;
+
+}
+
+.options::-webkit-scrollbar-thumb {
+background: #ccc;
+border-radius: 25px;
+}
+.options li {
+  height: 50px;
+  padding: 0 13px;
+  border-radius: 5px;
+}
+
+.options li:hover , li.selected {
+  background: #f2f2f2;
+} 
+
+/* end ul with search */
+.select-wilaya {
+    border-bottom: 1px solid var(--second-color);
+ 
+
+}
+.select-wilaya input{
+width: 100%;
+background: transparent;
+outline: none;
+
+}
+/* end box form register  */
+
+
+/* box form Main  */
+
+.main-box {
+    display: flex;
+}
+.main-box .main-1 {
+    max-width: 450px;
+    background: #fff;
+    border-radius: 10px;
+padding: 20px;
+margin-right: 90px;
+margin-top: 30px;
+
+}
+
+.main-box .main-1 .tiltle{
+    display: flex;
+    flex-wrap: wrap; /* This allows elements to wrap to the next line */
+
+}
+.element {
+    flex-basis: calc(33.33% - 10px); /* Adjust the width as per your requirements */
+  margin-top: 2px;/* Add some margin for spacing */
+  margin-right: 17px;
+
+  }
+  
+  /* To make sure there are only 3 elements per row, adjust as needed */
+  .element:nth-child(3n+1) {
+    flex-basis: 100%; /* Make the first element in every row take the entire width */
+  }
+
+.main-1 ion-icon{
+    border-radius: 50%;
+    background-color: #ffc8dd;
+    color: var(--icon-hover);
+    padding: 3px;
+    font-size: 23px;
+    margin-left: 13px;
+}
+
+.main-box .main-1 .details{
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #e0deda;
+    padding: 7px;
+
+}
+.details .entr{
+    display: flex;
+}
+.main-1 .details img{
+    margin-left: 17px;
+
+}
+
+.main-1 .details .details-all {
+    background-color: var(--menu-color);
+    padding: 5px;
+}
+
+.main-1 .details .details-all a {
+    
+    text-decoration: none;
+    color: black;
+}
+
+
+.option-main {
+    margin-right: 90px;
+    display: flex;
+    margin-top: 60px;
+}
+
+.option-main div {
+    background-color: #edede9;
+    margin-left: 20px;
+    padding: 2px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+.option-main .option:hover {
+    background-color: var(--menu-color);
+    color: black;
+}
+
+.option.active {
+    background-color: black;
+    color: #fff;
+}
+
+
+.elementOption {
+    margin-right: 90px;
+    margin-top: 20px;
+}
+
+.tableOption table{
+    width: 100%;
+
+}
+
+.tableOption table td{
+border-bottom: 1px solid #edede9;
+padding: 10px 0;
+}
+
+
+
+/* end box form Main  */
+
+
+/* page form list.php */
+
+.list-box {
+ 
+ width: 100%;
+    padding: 40px;
+border-radius: 10px;  
+
+}
+
+.printer {
+    position: relative;
+    right: 100px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+}
+
+.list-box table {
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px #e1e5ee;
+    background-color: #fff;
+    text-align: right;
+    overflow: hidden; 
+    margin: 0 100px; 
+
+width: 90%;
+}
+
+.list-box table thead{
+    box-shadow: 0 5px 10px #e1e5ee;
+
+}
+.list-box table thead th {
+        padding: 1rem 2rem;
+        font-weight: 900;
+    }
+
+
+    .list-box table tbody td {
+        padding: 1rem 2rem;
+
+    }
+
+    .list-box table tr:nth-child(even){
+
+background-color: var(--menu-color);
+    }
+
+    .btn-edit {
+        background: #fff;
+        border: none;
+    outline: none;
+    cursor: pointer; 
+
+    }
+
+  .liveSearch input{
+    width: 400px;
+    margin: auto;
+    background: transparent;
+    font-size: 18px;
+  }
+.logo-print {
+    display: none;
+    
+}
+
+
+  @media print {
+    header , .navigation{
+    display: none;
+
+}
+
+
+.list-box table thead th {
+    padding: 4px 6px;
+    font-weight: 900;
+}
+
+
+.list-box table tbody td {
+    padding: 4px 12px;
+
+}
+.printHidden {
+    display: none;
+}
+.logo-print {
+    display: flex;
+    justify-content:space-between;
+}
+
+.logo-print img {
+    width: 90px;
+
+}
+  }
+
+/* end page form list.php */
+
+
+
+/*--------- Page analysis ----------- */
+.liveSearch_MY {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    
+
+}
+.liveSearch_MY input{
+    width: 200px;
+    background: transparent;
+    font-size: 18px;
+    margin-left: 10px;
+
+
+
+}
+
+.liveSearch select{
+    width: 400px;
+    margin: auto;
+    background: transparent;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid var(--first-color);
+  }
+
+
+
+/* ================== Charts JS ============== */
+.chartsBx{
+    position: relative;
+    padding: 20px;
+    display: grid;
+    /* grid-template-columns: 2fr 1fr; */
+    /* grid-template-columns: 1fr 2fr; */
+
+    grid-gap: 30px;
+    margin: 0 150px; /* Center horizontally */
+
+    
+  }
+  
+  .chartsBx .chart{
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    border: 1px solid var(--icon-hover);
+
+    display: flex;
+    margin: auto;
+  }
+  
+
+  
+ /* Style for the radio container (optional)  */
+  .chosse-container {
+ 
+    display: flex;
+    justify-content:center;
+    margin-top: 35px;
+    text-align: center;
+  }
+
+
+
+  /* ul with search School Analysis*/
+
+.boxSearchSch {
+    margin-bottom: 30px;
+  }
+  .select-btnAnly, .optionsSch li {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  
+  
+  }
+  .select-btnAnly{
+    font-size: 16px;
+    align-items: center;
+    padding: 0 20px;
+    background: #f4f3ee;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--second-color);
+  
+  }
+  
+  .select-btnAnly i {
+    font-size: 31px;
+  transition: transform 0.3s linear;
+  }
+  .boxSearchSch.active .select-btnAnly i {
+    transform: rotate(-180deg);
+  }
+  .contentSear {
+    display: none;
+    padding: 20px;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px;
+  
+  }
+  .boxSearchSch.active .contentSear {
+    display: block;
+    
+  }
+  
+  .contentSear .searchSch{
+    position: relative;
+  }
+  .searchSch i{
+    left: 15px;
+    color: #999;
+    font-size: 20px;
+    line-height: 53px;
+  position: absolute;
+  
+  }
+  .searchSch input {
+    height: 53px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+  padding: 0 15px 0 43px;
+  border: 1px solid #b3b3b3;
+  }
+  
+  .contentSear .optionsSch {
+    margin-top: 10px;
+    max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+  
+  }
+  .optionsSch::-webkit-scrollbar{
+  width: 7px;
+  }
+  .optionsSch::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+  
+  }
+  
+  .optionsSch::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+  }
+  .optionsSch li {
+    height: 50px;
+    padding: 0 13px;
+    border-radius: 5px;
+  }
+  
+  .optionsSch li:hover , li.selected {
+    background: #f2f2f2;
+  }
+  
+  /* end ul with search School Analysis*/
+
+
